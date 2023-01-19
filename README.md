@@ -82,7 +82,21 @@ let project = Project(
   - `case string(String)` -> Value Type
 
         
+## 🎨 Instance Properties 
 
+- `base: SettingsDictionary` : 모든 구성에서 상속되며 빌드 설정이 있는 Dictionary
+- `configurations: [Configuration]`
+- `defaultSettings: DefaultsSettings`
+
+
+## ✏️ Type Methods
+
+
+
+```swift
+static func settings(base: SettingsDictionary, configurations: [Configuration], defaultSettings: DefaultsSettings) -> Settings
+static func settings(base: SettingsDictionary, debug: SettingsDictionary, release: SettingsDictionary, defaultSettings: DefaultsSettings) -> Settings
+```
 
 
 
