@@ -65,5 +65,25 @@ let project = Project(
 
 
 
+### Settings Type
+
+`struct Settings` : 그룹 세팅을 위한 구성
+
+#### Topics!!
+
+`enum DefaultSettings` : 모든 프로젝트 그리고 타켓의 기본 적용대상으로 하며 기본 설정 및 세팅으로 지정하며, 재정의를 통해 기본 세팅을 한다.
+
+`enum Configuration` : 프로젝트 또는 타겟 빌드 설정을 `.xcconfig`, `.debug`, `.release` 로 설정 합니다.
+
+`enum SettingValue` :  컬렉션 타입 값 또는 Value을 사용하여 세팅
+
+- ⭐️ Enumration Cases
+  - `case array([String])` -> Collection type
+  - `case string(String)` -> Value Type
+
+        
+
+
+
 
 
