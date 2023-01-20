@@ -101,3 +101,65 @@ static func settings(base: SettingsDictionary, debug: SettingsDictionary, releas
 
 
 
+<br>
+<br>
+<br>
+
+## 📦 Target Type
+
+`struct Target` : 프로젝트 타겟
+
+
+#### 🤩 Topics!!
+
+`struct SourceFileList` : 소스 파일 경로 정의
+
+`struct SourceFileGlob` : 소스 파일과 컴파일러를 전역 패턴으로 정의
+
+
+
+#### 🫡 Defining headers
+
+`struct Headers` : public, private 프로젝트의 헤더 파일
+
+
+
+### 🧑‍💻 Initializers
+
+`init(from: Decoder) thorws`
+
+`init(globs: [String])` : 전역 패턴을 문자열로 사용하여 원본 파일 목록을 만든다.
+
+`init(globs: [SourceFileGlob])` : 전역 패턴을 사용하여 소스 파일 목록을 만든다.
+
+
+<br>
+<br>
+<br>
+
+## 📃 SourceFileGlob Type
+
+`struct SourceFileGlob` : 소스 파일과 컴파일러를 전역 패턴으로 정의
+
+
+
+### 🧑‍💻 Initializers
+
+`init(from: Decoder) throws`
+
+
+
+
+
+### 🧐 Instance Properties
+
+`let codegen: FileCodeGen?` : 빌드 단계에서 설정할 소스 파일 속성 입니다.
+
+`let complierFlags: String?` : 소스 빌드 단계에서 소스 파일에 설정할 컴파일러 플래그 입니다. 
+
+`let excluding: [Path]` : 제외된 소스파일에 대한 glob 패턴 입니다.
+
+`let glob: Path` : 소스 파일에 대한 glob 패턴
+
+
+
