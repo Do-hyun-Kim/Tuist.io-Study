@@ -9,6 +9,9 @@
 | --------------- | ---------------------------------------------------------- |
 | `Tuist`     | Tuist io, Tuist init, Tuist Method                                    |
 | `Tuist Project 생성` | 비즈니스 로직 분리, UI Configure                           |
+| `Tuist Settings` 개념 정리| Tuist Settings Type 개념 정리|
+| `Tuist Target` 개념 정리| Tuist Target Type 개념 정리|
+| [Static Library vs Dynamic Library](https://github.com/Do-hyun-Kim/Tuist.io-Study/blob/main/Library%20%EA%B0%9C%EB%85%90%20%EC%A0%95%EB%A6%AC/Library_%EA%B0%9C%EB%85%90%EC%A0%95%EB%A6%AC.md) | static Library와 dynamic Library의 개념 및 차이 정리|
 
 
 
