@@ -1,10 +1,48 @@
 import ProjectDescription
-
+import ProjectDescriptionHelpers
 
 
 
 //MARK: Project
 public extension Project {
+    
+    static func makeFrameWork(
+        name: String,
+        product: Product,
+        dependencies: [TargetDependency] = [],
+        packages: [Package] = [],
+        sources: SourceFilesList = ["Sources/**"]
+    ) -> Self {
+        
+        let frameworkSettings: Settings = .settings(
+            base: [:],
+            configurations: [
+                .release(name: .release)
+            ],
+            defaultSettings: .recommended
+        )
+        
+        let frameworkTarget: Target = Target(
+            name: name,
+            platform: .iOS,
+            product: product,
+            bundleId: "com.project.\(name)",
+            deploymentTarget: .iOS(targetVersion: "15.0", devices: [.iphone]),
+            infoPlist: .default,
+            sources: ["Sources/**"],
+            resources: ["Resources/**"],
+            dependencies: dependencies,
+            settings: frameworkSettings
+        )
+        let target: [Target] = [frameworkTarget]
+        
+        return Project(
+            name: name,
+            packages: packages,
+            settings: frameworkSettings,
+            targets: target
+        )
+    }
     
     
     static func makeApp(

@@ -4,6 +4,6 @@ import ProjectDescriptionHelpers
 
 let feature = Project.makeApp(
     name: "TuistFeature",
-    product: .dynamicLibrary,
+    product: .staticLibrary,
     dependencies: []
 )
